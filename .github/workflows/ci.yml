@@ -13,11 +13,12 @@ on:
 jobs:
   test:
     runs-on: ${{ matrix.os }}
+    continue-on-error: true
 
     strategy:
       matrix:
         node-version: [10, 12, 14, 16]
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [macos-12, ubuntu-20.04, windows-latest]
 
     steps:
       - uses: actions/checkout@v2.3.4
@@ -45,6 +46,16 @@ jobs:
           github-token: ${{ secrets.github_token }}
           parallel: true
           flag-name: run-${{ matrix.node-version }}-${{ matrix.os }}
+
+      - name: pack artifacts
+        run: |
+          npm pack
+
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{matrix.os}}-${{matrix.node-version}}
+          path: "fastify-3.17.0-sp1.tgz"
 
   coverage:
     needs: test

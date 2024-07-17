@@ -1,6 +1,6 @@
 {
   "name": "fastify",
-  "version": "3.17.0",
+  "version": "3.17.0-sp1",
   "description": "Fast and low overhead web framework, for Node.js",
   "main": "fastify.js",
   "type": "commonjs",
@@ -118,7 +118,7 @@
     "node": ">=10.16.0"
   },
   "devDependencies": {
-    "@fastify/ajv-compiler-8": "github:fastify/ajv-compiler#ajv-8",
+    "@fastify/ajv-compiler-8": "github:fastify/ajv-compiler#v2.0.0",
     "@hapi/joi": "^17.1.1",
     "@sinonjs/fake-timers": "^7.0.0",
     "@types/node": "^15.3.0",
