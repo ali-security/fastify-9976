@@ -167,7 +167,7 @@ export { FastifyLoggerOptions, FastifyLoggerInstance, FastifyLogFn, LogLevel } f
 export { FastifyContext, FastifyContextConfig } from './types/context'
 export { RouteHandler, RouteHandlerMethod, RouteOptions, RouteShorthandMethod, RouteShorthandOptions, RouteShorthandOptionsWithHandler } from './types/route'
 export * from './types/register'
-export { FastifyBodyParser, FastifyContentTypeParser, AddContentTypeParser, hasContentTypeParser, getDefaultJsonParser, ProtoAction, ConstructorAction } from './types/content-type-parser'
+export { FastifyBodyParser, FastifyContentTypeParser, AddContentTypeParser, hasContentTypeParser, removeAllContentTypeParsers, getDefaultJsonParser, ProtoAction, ConstructorAction } from './types/content-type-parser'
 export { FastifyError } from 'fastify-error'
 export { FastifySchema, FastifySchemaCompiler } from './types/schema'
 export { HTTPMethods, RawServerBase, RawRequestDefaultExpression, RawReplyDefaultExpression, RawServerDefault, ContextConfigDefault, RequestBodyDefault, RequestQuerystringDefault, RequestParamsDefault, RequestHeadersDefault } from './types/utils'

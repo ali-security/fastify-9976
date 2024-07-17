@@ -256,6 +256,7 @@ function fastify (options) {
     // custom parsers
     addContentTypeParser: ContentTypeParser.helpers.addContentTypeParser,
     hasContentTypeParser: ContentTypeParser.helpers.hasContentTypeParser,
+    removeAllContentTypeParsers: ContentTypeParser.helpers.removeAllContentTypeParsers,
     getDefaultJsonParser: ContentTypeParser.defaultParsers.getDefaultJsonParser,
     defaultTextParser: ContentTypeParser.defaultParsers.defaultTextParser,
     // Fastify architecture methods (initialized by Avvio)

@@ -55,6 +55,8 @@ export interface AddContentTypeParser<
  */
 export type hasContentTypeParser = (contentType: string | RegExp) => boolean
 
+export type removeAllContentTypeParsers = () => void
+
 export type ProtoAction = 'error' | 'remove' | 'ignore'
 
 export type ConstructorAction = 'error' | 'remove' | 'ignore'
